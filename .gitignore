@@ -6,3 +6,6 @@ uploadvideo/*
 preprocessing/Data/TrackNetModel/*
 preprocessing/Code/TrackNet/*
 *.json
+
+!uploadvideo/readme.md
+!log/readme.md

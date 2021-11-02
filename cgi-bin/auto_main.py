@@ -1,9 +1,10 @@
+#!/usr/bin/python3
 # /home/ino/anaconda3/envs/TrackNet/bin/python3
 import cgitb
 import os
 if not os.path.isdir('./log'):
     os.mkdir('./log')
-cgitb.enable(display=0, logdir='./log')
+cgitb.enable(display=1, logdir='./log')
 import cgi
 import uploadvideo
 import TrackNetPredict
@@ -118,7 +119,7 @@ if __name__ == "__main__":
     if tracknetpredictmode == 'on':
         # TrackNet prediction(Local test can commit TrackNet to reduce runtime)
         previous_time = time.time()
-        # TrackNetPredict.run(TrackNet_input, TrackNet_output)
+        TrackNetPredict.run(TrackNet_input, TrackNet_output)
         end_time = time.time()
 
         print("TrackNet time : ",end_time - previous_time)
